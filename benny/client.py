@@ -140,6 +140,7 @@ class Client:
 
         url = f"{self.base_url}/trash"
         params = {"face": face, "trash": trash}
+
         resp = requests.get(url, params=params)
 
         return image.Image(resp)
@@ -163,7 +164,7 @@ class Client:
 
         return image.Image(resp)
 
-    def am_i_a_joke(self, image: str) -> image.Image:
+    def am_i_a_joke(self, image_url: str) -> image.Image:
         """
         Are you a joke?
 
@@ -175,12 +176,12 @@ class Client:
         """
 
         url = f"{self.base_url}/amiajoke"
-        params = {"image": image}
+        params = {"image": image_url}
         resp = requests.get(url, params=params)
 
         return image.Image(resp)
 
-    def bad(self, image: str) -> image.Image:
+    def bad(self, image_url: str) -> image.Image:
         """
         Has someone been bad?
 
@@ -192,7 +193,7 @@ class Client:
         """
 
         url = f"{self.base_url}/bad"
-        params = {"image": image}
+        params = {"image": image_url}
         resp = requests.get(url, params=params)
 
         return image.Image(resp)
@@ -248,7 +249,7 @@ class Client:
 
         return image.Image(resp)
 
-    def salty(self, image: str) -> image.Image:
+    def salty(self, image_url: str) -> image.Image:
         """
         Make someone salty
 
@@ -260,7 +261,7 @@ class Client:
         """
 
         url = f"{self.base_url}/salty"
-        params = {"image": image}
+        params = {"image": image_url}
         resp = requests.get(url, params=params)
 
         return image.Image(resp)
@@ -282,7 +283,7 @@ class Client:
 
         return image.Image(resp)
 
-    def shame(self, image: str) -> image.Image:
+    def shame(self, image_url: str) -> image.Image:
         """
         Shame someone
 
@@ -294,12 +295,12 @@ class Client:
         """
             
         url = f"{self.base_url}/shame"
-        params = {"image": image}
+        params = {"image": image_url}
         resp = requests.get(url, params=params)
 
         return image.Image(resp)
 
-    def what(self, image: str) -> image.Image:
+    def what(self, image_url: str) -> image.Image:
         """
         what
 
@@ -311,12 +312,12 @@ class Client:
         """
 
         url = f"{self.base_url}/what"
-        params = {"image": image}
+        params = {"image": image_url}
         resp = requests.get(url, params=params)
 
         return image.Image(resp)
 
-    def joke_over_head(self, image: str) -> image.Image:
+    def joke_over_head(self, image_url: str) -> image.Image:
         """
         Hhaaha.. joke
 
@@ -328,7 +329,7 @@ class Client:
         """
 
         url = f"{self.base_url}/jokeoverhead"
-        params = {"image": image}
+        params = {"image": image_url}
         resp = requests.get(url, params=params)
 
         return image.Image(resp)
@@ -459,7 +460,7 @@ class Client:
 
         return image.Image(resp)
 
-    def communism(self, image: str) -> image.Image:
+    def communism(self, image_url: str) -> image.Image:
         """
         Overlay the communism flag on an image
 
@@ -471,7 +472,7 @@ class Client:
         """
 
         url = f"{self.base_url}/communism"
-        params = {"image": image}
+        params = {"image": image_url}
         resp = requests.get(url, params=params)
 
         return image.Image(resp)
