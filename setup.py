@@ -24,7 +24,7 @@ A Python wrapper for Benny's API.
 
 setup(
     name='benny.py',
-    version='1.0.0',
+    version='1.0.1',
     description='A Python wrapper for Benny\'s API.',
     requires=['requests'],
     packages=['benny', 'benny.utils'],
